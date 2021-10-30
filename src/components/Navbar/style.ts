@@ -4,6 +4,8 @@ export const SectionContainer = styled.section`
   width: 100%;
   display: flex;
   position: fixed;
+  z-index: 1000;
+  background-color: #EEDED1;
 `;
 
 export const Container = styled.div`
