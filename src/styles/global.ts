@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import BalooBold from '../assets/Baloo2-Bold.ttf';
 import BalooExtraBold from '../assets/Baloo2-ExtraBold.ttf';
+import BalooRegular from '../assets/Baloo2-Regular.ttf';
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   h1,h2,h3{
@@ -27,6 +29,12 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'BalooExtraBold';
     src: url(${BalooExtraBold}) format('woff2');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BalooRegular';
+    src: url(${BalooRegular}) format('woff2');
     font-style: normal;
   }
 

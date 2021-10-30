@@ -4,6 +4,7 @@ import { Navbar } from './Navbar';
 import { Awards } from './Awards/Awards';
 import { Guests } from './Guests';
 import { Footer } from './Footer';
+import { PartnersSection } from './PartnersSection';
 
 export {
   Awards,
@@ -12,4 +13,5 @@ export {
   Guests,
   HomePage,
   Navbar,
+  PartnersSection,
 };
