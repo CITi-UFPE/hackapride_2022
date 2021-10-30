@@ -1,21 +1,36 @@
 import React from 'react';
-import { Container } from './style';
-import { Logo } from '../../assets';
+import {
+  Container,
+  DateTitle,
+  HomeButton,
+  HomeText,
+  MainTitle,
+  RainbowContainer,
+} from './style';
 
 export const HomePage: React.FC = () => (
   <Container>
-    <img src={Logo} alt="" />
-    <h1>ReactJS Boilerplate</h1>
-    <p>
-      Made with
-      {' '}
-      <strong>&lt; &#x0002F; &gt;</strong>
-      {' '}
-      and
-      {' '}
-      <strong>&hearts;</strong>
-      {' '}
-      by CITi
-    </p>
+    <MainTitle>
+      Se capacite, se empodere,
+    </MainTitle>
+    <MainTitle>
+      se permita fazer parte de uma
+    </MainTitle>
+    <MainTitle>
+      revolução.
+    </MainTitle>
+    <RainbowContainer />
+    <DateTitle>
+      15, 16 e 17 de janeiro
+    </DateTitle>
+    <HomeButton>
+      Inscreva-se
+    </HomeButton>
+    <HomeText>
+      Lectus fermentum et morbi viverra nunc, elementum tortor,
+      lacus risus.  Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. In mauris, amet, justo, pharetra adipiscing praesent nisl.
+      Nullam dignissim vel accumsan arcu proin neque
+    </HomeText>
   </Container>
 );

@@ -5,7 +5,7 @@ export const Infos = styled.div`
   h3 {
     font-size: 28px;
     font-weight: 600;
-    color: ${(props) => props.theme.colors.sectionTitle};
+    color: ${(props) => props.theme.colors.black};
     margin: -20px;
   }
 
