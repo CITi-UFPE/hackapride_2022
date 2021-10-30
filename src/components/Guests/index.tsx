@@ -1,11 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Container } from './style';
+import { Container, SlickContainer } from './style';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { OutsideContainer } from '../../styles/globalComponents';
+import { Logo } from '../../assets';
 
-const album = [['1', 'a'], ['2', 'b'], ['2', 'c']];
+const album = [
+  [Logo, 'foto 01'],
+  [Logo, 'foto 02'],
+  [Logo, 'foto 03'],
+];
 
 export const Guests: React.FC = () => {
   const settings = {
@@ -16,7 +21,7 @@ export const Guests: React.FC = () => {
     slidesToScroll: 1,
   };
   return (
-    <OutsideContainer>
+    <OutsideContainer style={{ height: '100vh' }}>
       <Container>
         <h1>
           Pessoas Convidadas
@@ -27,13 +32,19 @@ export const Guests: React.FC = () => {
           elementum tortor, lacus risus.
         </p>
         <div style={{ width: '50%' }}>
-          <Slider {...settings}>
-            {album?.map((index) => (
-              <div key={index[0]} className="guests-card">
-                {index[1]}
-              </div>
-            ))}
-          </Slider>
+          <SlickContainer>
+            <Slider {...settings}>
+              {album?.map((value) => (
+                <div
+                  key={value[0]}
+                  className="guests-card"
+                >
+                  <img src={value[0]} alt="" />
+                  <p>{value[1]}</p>
+                </div>
+              ))}
+            </Slider>
+          </SlickContainer>
         </div>
       </Container>
     </OutsideContainer>
