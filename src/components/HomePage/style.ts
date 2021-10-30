@@ -34,6 +34,7 @@ export const Container = styled.div`
   }
 `;
 export const MainTitle = styled.div`
+  /* margin-top: 404px; */
   justify-content: center;
   align-self: center;
   max-width: 979px;
@@ -44,6 +45,7 @@ export const MainTitle = styled.div`
 `;
 
 export const RainbowContainer = styled.div`
+  margin-top: 21px;
   width: 272px;
   height: 532px;
   background-color: #f00;
