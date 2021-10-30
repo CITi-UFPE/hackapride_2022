@@ -35,10 +35,13 @@ export const ContainerAwards = styled.div`
 `;
 
 export const StarsWebAwards = styled.div`
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  padding: 40px;
+  width: 12.5;
+  background-color: aqua;
 `;
 
 export const StarsMobileAwards = styled.div`
@@ -49,6 +52,8 @@ export const StarsMobileAwards = styled.div`
 `;
 
 export const TextBodyAwards = styled.div`
+  padding-top: 3rem;
+  width: 75%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -62,12 +67,13 @@ export const HeaderAwards = styled.div`
 `;
 
 export const TitleAwards = styled.div`
-font-family:  BalooExtraBold;
+  font-family:  BalooExtraBold;
   color: #28201A;
   font-size: 44px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
+  width: 30%;
 `;
 
 export const SubTitleAwards = styled.div`
@@ -75,7 +81,7 @@ export const SubTitleAwards = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   font-family: BalooExtraBold;
   font-size: 24px;
   line-height: 106.9%;
@@ -97,6 +103,9 @@ export const ListItemAwards = styled.div`
 
 export const Description = styled.div`
   padding-left: 20px;
+  font-family:  BalooBold;
+  font-size: 20px;
+  line-height: 106.9%;
 `;
 
 export const SupremeTitleAwards = styled.div`
@@ -111,4 +120,18 @@ export const SupremeTitleAwards = styled.div`
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
+`;
+
+export const RainbowImage = styled.img`
+  height: 44px;
+  width: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StarWebImage = styled.img`
+  width: 70px;
+  height: 250px;
 `;

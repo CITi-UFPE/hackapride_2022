@@ -3,6 +3,7 @@ import React from 'react';
 import {
   ContainerAwards, StarsWebAwards, StarsMobileAwards, TextBodyAwards, TitleAwards,
   HeaderAwards, SubTitleAwards, ListAwards, ListItemAwards, Description, SupremeTitleAwards,
+  RainbowImage, StarWebImage,
 } from './style';
 import {
   StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight, Rainbow,
@@ -10,19 +11,17 @@ import {
 
 export const Awards: React.FC = () => (
   <ContainerAwards>
-    <StarsWebAwards>
-      <img src={StarsWebLeft} alt="" width="44px" height="44px" />
-    </StarsWebAwards>
+    <StarWebImage src={StarsWebLeft} />
 
-    <StarsMobileAwards>
+    {/* <StarsMobileAwards>
       <img src={StarsMobileLeft} alt="" />
-    </StarsMobileAwards>
+    </StarsMobileAwards> */}
 
     <TextBodyAwards>
       <HeaderAwards>
 
         <SupremeTitleAwards>
-          <img src={Rainbow} alt="" />
+          <RainbowImage src={Rainbow} />
           Premiações
         </SupremeTitleAwards>
         <SubTitleAwards>
@@ -61,13 +60,11 @@ export const Awards: React.FC = () => (
       </ListAwards>
     </TextBodyAwards>
 
-    <StarsMobileAwards>
+    {/* <StarsMobileAwards>
       <img src={StarsMobileRight} alt="" />
-    </StarsMobileAwards>
+    </StarsMobileAwards> */}
 
-    <StarsWebAwards>
-      <img src={StarsWebRight} alt="" />
-    </StarsWebAwards>
+    <StarWebImage src={StarsWebRight} />
 
   </ContainerAwards>
 );
