@@ -3,6 +3,7 @@ import { Contact } from './Contact';
 import { Navbar } from './Navbar';
 import { Awards } from './Awards/Awards';
 import { Guests } from './Guests';
+import { PartnersSection } from './PartnersSection';
 
 export {
   Navbar,
@@ -10,4 +11,5 @@ export {
   Contact,
   Awards,
   Guests,
+  PartnersSection,
 };
