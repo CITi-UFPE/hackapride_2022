@@ -6,6 +6,7 @@ import StarsMobileLeft from './starmobileleft.svg';
 import StarsMobileRight from './starmobileright.svg';
 import Rainbow from './rainbow.svg';
 import LogoHackapride from './logo_hackapride.svg';
+import Flower from './flower.svg';
 
 export {
   Logo,
@@ -16,4 +17,5 @@ export {
   StarsWebLeft,
   StarsWebRight,
   Rainbow,
+  Flower,
 };

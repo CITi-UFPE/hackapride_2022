@@ -13,13 +13,13 @@ import { theme } from './styles/theme';
 
 export const App: React.FC = () => (
   <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <Navbar />
     <HomePage />
     <Awards />
     <Guests />
     <Contact />
-    <Footer />
-    <GlobalStyle />
     <PartnersSection />
+    <Footer />
   </ThemeProvider>
 );

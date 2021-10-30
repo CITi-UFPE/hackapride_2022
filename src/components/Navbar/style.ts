@@ -93,9 +93,45 @@ export const Lines = styled.span`
 
 export const OpenedHamburguer = styled.div`
   display: flex;
+  margin-top: 99px;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh;
   z-index: 1000;
+  position: absolute;
+  background-color: ${(props) => props.theme.colors.background};;
+  overflow-y: scroll;
+  overflow-x: hidden;
+`;
+
+export const FlowerImage = styled.img`
+  bottom: 50px;
+  position: absolute;
+  left: -80px;
+  width: 400px;
+
+  @media (max-width: 380px) {
+    & {
+      width: 350px;
+    }
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  background-color: ${(props) => props.theme.colors.background};
+  width: 60%;
+  border: 3px;
+  border-color: #28201A;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border-radius: 8px;
+  padding: 5px 10px;
+`;
+
+export const ButtonText = styled.p`
+  color: #28201A;
+  font-size: 28px;
 `;
