@@ -21,7 +21,7 @@ export const Guests: React.FC = () => {
     slidesToScroll: 1,
   };
   return (
-    <OutsideContainer>
+    <OutsideContainer style={{ height: '100vh' }}>
       <Container>
         <h1>
           Pessoas Convidadas
@@ -38,7 +38,6 @@ export const Guests: React.FC = () => {
                 <div
                   key={value[0]}
                   className="guests-card"
-                  style={{ height: '100px', backgroundColor: 'red' }}
                 >
                   <img src={value[0]} alt="" />
                   <p>{value[1]}</p>
