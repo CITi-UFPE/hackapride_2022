@@ -1,21 +1,14 @@
 import React from 'react';
-import { Container } from './style';
-import { Logo } from '../../assets';
+import { Container, Rainbow, RainbowContainer } from './style';
 
 export const HomePage: React.FC = () => (
   <Container>
-    <img src={Logo} alt="" />
-    <h1>ReactJS Boilerplate</h1>
-    <p>
-      Made with
-      {' '}
-      <strong>&lt; &#x0002F; &gt;</strong>
-      {' '}
-      and
-      {' '}
-      <strong>&hearts;</strong>
-      {' '}
-      by CITi
-    </p>
+    <div>
+      <RainbowContainer>
+        <Rainbow />
+        <Rainbow />
+        <Rainbow />
+      </RainbowContainer>
+    </div>
   </Container>
 );

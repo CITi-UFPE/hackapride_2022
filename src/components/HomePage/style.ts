@@ -33,3 +33,16 @@ export const Container = styled.div`
     width: 25%;
   }
 `;
+
+export const RainbowContainer = styled.div`
+  display: inline;
+`;
+
+export const Rainbow = styled.div`
+  animation: loading 1.5s 1s infinite;
+  color: #0f0;
+  background-color: #f00;
+  height: 200px;
+  width: 30px;
+  border-radius: 0 0 30px 30px;
+`;
