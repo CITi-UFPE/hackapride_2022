@@ -7,7 +7,6 @@ import StarsMobileRight from './starmobileright.svg';
 import Rainbow from './rainbow.svg';
 import LogoHackapride from './logo_hackapride.svg';
 
-
 export {
   Logo,
   LogoHacka,
