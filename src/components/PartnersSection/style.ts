@@ -26,9 +26,11 @@ export const Container = styled.div`
 
 export const PartnersPhotos = styled.div`
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-areas:
+              "p p p p"
+              "p p p p";
+  gap: 2em 5em;
 `;
 
 export const Photo = styled.div`
@@ -36,16 +38,4 @@ export const Photo = styled.div`
   width: 100px;
   border-radius: 50%;
   background-color: ${(props) => props.theme.colors.grey};
-`;
-
-export const FirstLine = styled.div`
-  display: flex;
-  gap: 20px;
-  flex-wrap: row wrap;
-`;
-
-export const SecondLine = styled.div`
-  display: flex;
-  gap: 20px;
-  flex-wrap: row wrap;
 `;
