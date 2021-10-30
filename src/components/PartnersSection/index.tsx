@@ -3,6 +3,10 @@ import React from 'react';
 import {
   Infos,
   Container,
+  PartnersPhotos,
+  Photo,
+  FirstLine,
+  SecondLine,
 } from './style';
 
 import sectionsRainbow from '../../assets/sectionsRainbow.svg';
@@ -22,6 +26,20 @@ export const PartnersSection: React.FC = () => (
           pharetra adipiscing praesent nisl. Nullam dignissim
           vel accumsan arcu proin neque vel cras.
         </p>
+        <PartnersPhotos>
+          <FirstLine>
+            <Photo />
+            <Photo />
+            <Photo />
+            <Photo />
+          </FirstLine>
+          <SecondLine>
+            <Photo />
+            <Photo />
+            <Photo />
+            <Photo />
+          </SecondLine>
+        </PartnersPhotos>
       </Container>
     </OutsideContainer>
   </Infos>

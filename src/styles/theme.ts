@@ -6,5 +6,6 @@ export const theme = {
     black: '#28201A',
     brown: '#423625',
     white: '#EEDED1',
+    grey: '#78706A',
   },
 };
