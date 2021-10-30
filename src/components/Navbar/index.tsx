@@ -8,18 +8,22 @@ import { OutsideContainer } from '../../styles/globalComponents';
 const options = [
   {
     label: 'INFORMAÇÕES',
+    ref: '',
     id: 0,
   },
   {
     label: 'CONVIDADOS',
+    ref: '',
     id: 1,
   },
   {
     label: 'PARCEIROS',
+    ref: '',
     id: 2,
   },
   {
     label: 'CONTATO',
+    ref: '',
     id: 3,
   },
 ];
@@ -30,8 +34,8 @@ export const Navbar: React.FC = () => (
       <Container>
         <LogoImage src={LogoHackapride} />
         <TextContainer>
-          {options.map((option: {label: string}) => (
-            <MenuOption>{option.label}</MenuOption>
+          {options.map((option: {label: string, ref: string}) => (
+            <MenuOption href={option.ref}>{option.label}</MenuOption>
           ))}
         </TextContainer>
       </Container>

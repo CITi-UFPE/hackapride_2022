@@ -32,10 +32,13 @@ export const TextContainer = styled.div`
   gap: 30px;
 `;
 
-export const MenuOption = styled.p`
+export const MenuOption = styled.a`
   font-size: 20px;
   cursor: pointer;
   position: relative;
+  font-family:  BalooBold;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.text};
 
   &:after {
     content: '';
