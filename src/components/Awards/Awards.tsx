@@ -3,69 +3,71 @@ import React from 'react';
 import {
   ContainerAwards, StarsWebAwards, StarsMobileAwards, TextBodyAwards, TitleAwards,
   HeaderAwards, SubTitleAwards, ListAwards, ListItemAwards, Description, SupremeTitleAwards,
+  RainbowImage, StarWebImage, SubTitleAwardsMobile, StarMobileImage,
 } from './style';
 import {
-  StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight,
+  StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight, Rainbow,
 } from '../../assets';
 
 export const Awards: React.FC = () => (
-  <ContainerAwards>
-    <StarsWebAwards>
-      <img src={StarsWebLeft} alt="" />
-    </StarsWebAwards>
+  <>
+    <ContainerAwards>
+      <StarWebImage src={StarsWebLeft} />
 
-    <StarsMobileAwards>
-      <img src={StarsMobileLeft} alt="" />
-    </StarsMobileAwards>
+      <StarMobileImage src={StarsMobileLeft} />
 
-    <TextBodyAwards>
-      <HeaderAwards>
-        <SupremeTitleAwards>
-          Premiações
-        </SupremeTitleAwards>
-        <SubTitleAwards>
-          As premiações existem com o intuito de. ectus fermentum et morbi snecas viverra nunc, elementum tortor, lacus risus.
-        </SubTitleAwards>
-      </HeaderAwards>
+      <TextBodyAwards>
+        <HeaderAwards>
 
-      <ListAwards>
-        <ListItemAwards>
-          <TitleAwards>
-            1º Lugar
-          </TitleAwards>
-          <Description>
-            Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </Description>
-        </ListItemAwards>
+          <SupremeTitleAwards>
+            <RainbowImage src={Rainbow} />
+            Premiações
+          </SupremeTitleAwards>
+          <SubTitleAwards>
+            As premiações existem com o intuito de. ectus fermentum et morbi snecas viverra nunc, elementum tortor, lacus risus.
+          </SubTitleAwards>
+        </HeaderAwards>
 
-        <ListItemAwards>
-          <TitleAwards>
-            2º Lugar
-          </TitleAwards>
-          <Description>
-            Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </Description>
-        </ListItemAwards>
+        <ListAwards>
+          <ListItemAwards>
+            <TitleAwards>
+              1º Lugar
+            </TitleAwards>
+            <Description>
+              Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+            </Description>
+          </ListItemAwards>
 
-        <ListItemAwards>
-          <TitleAwards>
-            3º Lugar
-          </TitleAwards>
-          <Description>
-            Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </Description>
-        </ListItemAwards>
+          <ListItemAwards>
+            <TitleAwards>
+              2º Lugar
+            </TitleAwards>
+            <Description>
+              Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+            </Description>
+          </ListItemAwards>
 
-      </ListAwards>
-    </TextBodyAwards>
+          <ListItemAwards>
+            <TitleAwards>
+              3º Lugar
+            </TitleAwards>
+            <Description>
+              Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+            </Description>
+          </ListItemAwards>
 
-    <StarsMobileAwards>
-      <img src={StarsMobileRight} alt="" />
-    </StarsMobileAwards>
+        </ListAwards>
 
-    <StarsWebAwards>
-      <img src={StarsWebRight} alt="" />
-    </StarsWebAwards>
+      </TextBodyAwards>
 
-  </ContainerAwards>
+      <StarMobileImage src={StarsMobileRight} />
+
+      <StarWebImage src={StarsWebRight} />
+
+    </ContainerAwards>
+
+    <SubTitleAwardsMobile>
+      As premiações existem com o intuito de. ectus fermentum et morbi snecas viverra nunc, elementum tortor, lacus risus.
+    </SubTitleAwardsMobile>
+  </>
 );
