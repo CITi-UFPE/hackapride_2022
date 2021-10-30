@@ -14,6 +14,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 export const ContentContainer = styled.div`
@@ -32,5 +33,22 @@ export const TextContainer = styled.div`
 `;
 
 export const MenuOption = styled.p`
-  font-size: 20px
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: #28201A;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+  }
+
+  &:hover:after {
+    width: 100%;
+}
 `;
