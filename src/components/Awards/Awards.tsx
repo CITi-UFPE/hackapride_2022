@@ -2,7 +2,7 @@
 import React from 'react';
 import {
   ContainerAwards, StarsWebAwards, StarsMobileAwards, TextBodyAwards, TitleAwards,
-  HeaderAwards, SubTitleAwards,
+  HeaderAwards, SubTitleAwards, ListAwards, ListItemAwards, Description, SupremeTitleAwards,
 } from './style';
 import {
   StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight,
@@ -20,43 +20,43 @@ export const Awards: React.FC = () => (
 
     <TextBodyAwards>
       <HeaderAwards>
-        <TitleAwards>
+        <SupremeTitleAwards>
           Premiações
-        </TitleAwards>
+        </SupremeTitleAwards>
         <SubTitleAwards>
           As premiações existem com o intuito de. ectus fermentum et morbi snecas viverra nunc, elementum tortor, lacus risus.
         </SubTitleAwards>
       </HeaderAwards>
 
-      <div className="ListAwards">
-        <div className="ListItemAwards">
-          <div className="TitleAwards">
+      <ListAwards>
+        <ListItemAwards>
+          <TitleAwards>
             1º Lugar
-          </div>
-          <div className="Description">
+          </TitleAwards>
+          <Description>
             Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </div>
-        </div>
+          </Description>
+        </ListItemAwards>
 
-        <div className="ListItemAwards">
-          <div className="TitleAwards">
+        <ListItemAwards>
+          <TitleAwards>
             2º Lugar
-          </div>
-          <div className="Description">
+          </TitleAwards>
+          <Description>
             Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </div>
-        </div>
+          </Description>
+        </ListItemAwards>
 
-        <div className="ListItemAwards">
-          <div className="TitleAwards">
+        <ListItemAwards>
+          <TitleAwards>
             3º Lugar
-          </div>
-          <div className="Description">
+          </TitleAwards>
+          <Description>
             Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-          </div>
-        </div>
+          </Description>
+        </ListItemAwards>
 
-      </div>
+      </ListAwards>
     </TextBodyAwards>
 
     <StarsMobileAwards>
