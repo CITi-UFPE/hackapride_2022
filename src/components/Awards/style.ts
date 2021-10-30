@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const ContainerAwards = styled.div`
   width: 100vw;
   height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 
   h1 {
     font-size: 54px;
@@ -32,4 +32,30 @@ export const Container = styled.div`
   img {
     width: 25%;
   }
+`;
+
+export const StarsWebAwards = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StarsMobileAwards = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TextBodyAwards = styled.div`
+`;
+
+export const HeaderAwards = styled.div`
+`;
+
+export const TitleAwards = styled.div`
+`;
+
+export const SubTitleAwards = styled.div`
 `;
