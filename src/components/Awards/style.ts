@@ -58,9 +58,16 @@ export const TextBodyAwards = styled.div`
 `;
 
 export const HeaderAwards = styled.div`
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
 `;
 
 export const TitleAwards = styled.div`
+font-family:  BalooExtraBold;
+  color: #28201A;
+  font-size: 44px;
+  line-height: 100.4%;
+  text-align: center;
+  letter-spacing: 0.05em;
 `;
 
 export const SubTitleAwards = styled.div`
@@ -69,6 +76,13 @@ export const SubTitleAwards = styled.div`
   align-items: center;
   flex-direction: row;
   padding-bottom: 5rem;
+  font-family: BalooExtraBold;
+  font-size: 24px;
+  line-height: 106.9%;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #28201A;
+
 `;
 
 export const ListAwards = styled.div`
@@ -82,13 +96,19 @@ export const ListItemAwards = styled.div`
 `;
 
 export const Description = styled.div`
-padding-left: 20px;
+  padding-left: 20px;
 `;
 
 export const SupremeTitleAwards = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 2rem;
+  font-family:  BalooExtraBold;
+  color: #28201A;
+  font-size: 44px;
+  line-height: 100.4%;
+  text-align: center;
+  letter-spacing: 0.05em;
 `;

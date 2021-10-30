@@ -3,6 +3,7 @@ import StarsWebLeft from './starswebleft.svg';
 import StarsWebRight from './starwebright.svg';
 import StarsMobileLeft from './starmobileleft.svg';
 import StarsMobileRight from './starmobileright.svg';
+import Rainbow from './arcoawards.svg';
 
 export {
   Logo,
@@ -10,4 +11,5 @@ export {
   StarsMobileRight,
   StarsWebLeft,
   StarsWebRight,
+  Rainbow,
 };

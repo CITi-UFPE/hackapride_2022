@@ -5,13 +5,13 @@ import {
   HeaderAwards, SubTitleAwards, ListAwards, ListItemAwards, Description, SupremeTitleAwards,
 } from './style';
 import {
-  StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight,
+  StarsMobileLeft, StarsMobileRight, StarsWebLeft, StarsWebRight, Rainbow,
 } from '../../assets';
 
 export const Awards: React.FC = () => (
   <ContainerAwards>
     <StarsWebAwards>
-      <img src={StarsWebLeft} alt="" />
+      <img src={StarsWebLeft} alt="" width="44px" height="44px" />
     </StarsWebAwards>
 
     <StarsMobileAwards>
@@ -20,7 +20,9 @@ export const Awards: React.FC = () => (
 
     <TextBodyAwards>
       <HeaderAwards>
+
         <SupremeTitleAwards>
+          <img src={Rainbow} alt="" />
           Premiações
         </SupremeTitleAwards>
         <SubTitleAwards>
