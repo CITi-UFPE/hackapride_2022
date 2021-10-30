@@ -1,10 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import { PublicRoutes } from './PublicRoutes';
+import { Guests } from '../components/Guests';
 
 export const Routes = ():JSX.Element => (
-  <Router>
-    <PublicRoutes />
-  </Router>
+  <Guests />
 );
