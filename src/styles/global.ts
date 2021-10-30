@@ -1,10 +1,33 @@
 import { createGlobalStyle } from 'styled-components';
+import BalooBold from '../assets/Baloo2-Bold.ttf';
+import BalooExtraBold from '../assets/Baloo2-ExtraBold.ttf';
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  h1,h2,h3{
+    font-family:  BalooExtraBold;
+  }
+
+  p {
+    font-family:  BalooBold;
+  }
+
+  @font-face {
+    font-family: 'BalooBold';
+    src: url(${BalooBold}) format('woff2');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BalooExtraBold';
+    src: url(${BalooExtraBold}) format('woff2');
+    font-style: normal;
   }
 
   html {
