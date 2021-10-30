@@ -31,3 +31,36 @@ export const Container = styled.div`
     width: 25%;
   }
 `;
+
+export const SlickContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 95%;
+  max-width: 1000px;
+  height: 180px;
+  .slick-slider {
+    display: flex;
+    justify-content: center;
+  }
+  .slick-list {
+    width: 100%;
+  }  
+  button {
+    width: 5%;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+  }
+  .slick-slider img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px;
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
