@@ -49,6 +49,12 @@ export const StarsMobileAwards = styled.div`
 `;
 
 export const TextBodyAwards = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
 `;
 
 export const HeaderAwards = styled.div`
@@ -58,4 +64,31 @@ export const TitleAwards = styled.div`
 `;
 
 export const SubTitleAwards = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 5rem;
+`;
+
+export const ListAwards = styled.div`
+`;
+
+export const ListItemAwards = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+`;
+
+export const Description = styled.div`
+padding-left: 20px;
+`;
+
+export const SupremeTitleAwards = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 2rem;
 `;
