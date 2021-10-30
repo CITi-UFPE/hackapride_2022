@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import {
   SectionContainer,
-  LogoImage, Container, TextContainer, MenuOption, HamburguerLines, Lines, OpenedHamburguer,
+  LogoImage,
+  Container,
+  TextContainer,
+  MenuOption,
+  HamburguerLines, Lines, OpenedHamburguer, FlowerImage, ButtonContainer, ButtonText,
 } from './style';
-import { LogoHackapride } from '../../assets';
+import { LogoHackapride, Flower } from '../../assets';
 import { OutsideContainer } from '../../styles/globalComponents';
 
 const options = [
@@ -49,15 +53,17 @@ export const Navbar: React.FC = () => {
                 }
               }}
             >
-              <Lines />
-              <Lines />
-              <Lines />
+              <Lines style={{ transform: toggle ? 'rotate(45deg)' : 'none', top: toggle ? '0px' : '', position: toggle ? 'absolute' : 'relative' }} />
+              <Lines style={{ transform: toggle ? 'rotate(-45deg)' : 'none' }} />
+              <Lines style={{ display: toggle ? 'none' : 'block' }} />
             </HamburguerLines>
+            {!toggle && (
             <TextContainer>
               {options.map((option: {label: string, ref: string, id: number}) => (
                 <MenuOption style={{ marginRight: option.id !== options.length - 1 ? '30px' : '0px' }} href={option.ref}>{option.label}</MenuOption>
               ))}
             </TextContainer>
+            )}
           </Container>
         </OutsideContainer>
         {toggle && (
@@ -65,6 +71,10 @@ export const Navbar: React.FC = () => {
           {options.map((option: {label: string, ref: string, id: number}) => (
             <MenuOption style={{ marginTop: '40px', fontSize: '28px' }} href={option.ref}>{option.label}</MenuOption>
           ))}
+          <ButtonContainer>
+            <ButtonText>INSCREVA-SE</ButtonText>
+          </ButtonContainer>
+          <FlowerImage src={Flower} />
         </OpenedHamburguer>
         )}
       </SectionContainer>
