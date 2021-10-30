@@ -15,6 +15,12 @@ export const Infos = styled.div`
   }
 
  text-align: center;
+
+ @media(max-width: 420px) {
+  p {
+    width: 80%;
+  }
+ }
 `;
 
 export const Container = styled.div`
@@ -31,6 +37,18 @@ export const PartnersPhotos = styled.div`
               "p p p p"
               "p p p p";
   gap: 2em 5em;
+
+  @media(max-width: 720px) {
+    grid-template-areas:
+              "p p"
+              "p p"
+              "p p"
+              "p p";
+  }
+
+  @media(max-width: 420px) {
+    gap: 1em 3em;
+  }
 `;
 
 export const Photo = styled.div`
@@ -38,4 +56,9 @@ export const Photo = styled.div`
   width: 100px;
   border-radius: 50%;
   background-color: ${(props) => props.theme.colors.grey};
+
+  @media(max-width: 420px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
