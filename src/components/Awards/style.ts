@@ -53,13 +53,15 @@ export const StarsMobileAwards = styled.div`
 
 export const TextBodyAwards = styled.div`
   padding-top: 3rem;
-  width: 75%;
+  width: 80%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+  @media (max-width: 830px) {
+      width: 40%;
+  }
 `;
 
 export const HeaderAwards = styled.div`
@@ -74,6 +76,9 @@ export const TitleAwards = styled.div`
   text-align: center;
   letter-spacing: 0.05em;
   width: 30%;
+  @media (max-width: 830px) {
+      font-size: 24px;
+    }
 `;
 
 export const SubTitleAwards = styled.div`
@@ -88,6 +93,30 @@ export const SubTitleAwards = styled.div`
   text-align: center;
   letter-spacing: 0.09em;
   color: #28201A;
+  @media (max-width: 830px) {
+      display: none;
+    }
+
+`;
+
+export const SubTitleAwardsMobile = styled.div`
+  display: none;
+  @media (max-width: 830px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 6rem;
+    font-family: BalooExtraBold;
+    font-size: 24px;
+    line-height: 106.9%;
+    text-align: center;
+    letter-spacing: 0.09em;
+    font-size: 14px;
+    color: #78706A;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
 `;
 
@@ -99,6 +128,9 @@ export const ListItemAwards = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 3rem;
+  @media (max-width: 830px) {
+      flex-direction: column;
+    }
 `;
 
 export const Description = styled.div`
@@ -106,6 +138,10 @@ export const Description = styled.div`
   font-family:  BalooBold;
   font-size: 20px;
   line-height: 106.9%;
+  @media (max-width: 830px) {
+      font-size: 14px;
+      padding: 0;
+    }
 `;
 
 export const SupremeTitleAwards = styled.div`
@@ -113,13 +149,16 @@ export const SupremeTitleAwards = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 2rem;
+  padding-bottom: 1.7rem;
   font-family:  BalooExtraBold;
   color: #28201A;
   font-size: 44px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
+  @media (max-width: 830px) {
+      font-size: 24px;
+    }
 `;
 
 export const RainbowImage = styled.img`
@@ -134,4 +173,19 @@ export const RainbowImage = styled.img`
 export const StarWebImage = styled.img`
   width: 70px;
   height: 250px;
+  @media (max-width: 830px) {
+      display: none;
+    }
+
+`;
+
+export const StarMobileImage = styled.img`
+  @media (min-width: 831px) {
+    display: none;
+  }
+  
+  @media (max-width: 830px) {
+    width: 70px;
+    height: 250px;
+    }
 `;
