@@ -3,16 +3,14 @@ import styled from 'styled-components';
 export const SectionContainer = styled.section`
   width: 100%;
   display: flex;
-  justify-content: center;
   position: fixed;
 `;
 
 export const Container = styled.div`
   width: 100%;
   height: 100px;
-  gap: 140px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: ${(props) => props.theme.colors.background};
 `;
@@ -28,8 +26,12 @@ export const LogoImage = styled.img`
 export const TextContainer = styled.div`
   display: flex;
   align-items: center;
-  letter-spacing: 1px;
-  gap: 30px;
+
+  @media (max-width: 910px) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 export const MenuOption = styled.a`
@@ -54,4 +56,34 @@ export const MenuOption = styled.a`
   &:hover:after {
     width: 100%;
 }
+`;
+
+export const HamburguerLines = styled.label`
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 30px;
+
+  @media (min-width: 910px) {
+    & {
+      display: none;
+    }
+  }
+`;
+
+export const Lines = styled.span`
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  height: 6px;
+  width: 100%;
+  background-color: #884100;
+  transition: 0.25s ease-in-out;
+
+  @media (min-width: 910px) {
+    & {
+      display: none;
+    }
+  }
 `;

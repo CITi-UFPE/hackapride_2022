@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  SectionContainer, LogoImage, Container, TextContainer, MenuOption,
+  SectionContainer, LogoImage, Container, TextContainer, MenuOption, HamburguerLines, Lines,
 } from './style';
 import { LogoHackapride } from '../../assets';
 import { OutsideContainer } from '../../styles/globalComponents';
@@ -30,12 +30,17 @@ const options = [
 
 export const Navbar: React.FC = () => (
   <SectionContainer>
-    <OutsideContainer>
+    <OutsideContainer style={{ display: 'flex', justifyContent: 'center', maxWidth: '820px' }}>
       <Container>
         <LogoImage src={LogoHackapride} />
+        <HamburguerLines>
+          <Lines />
+          <Lines />
+          <Lines />
+        </HamburguerLines>
         <TextContainer>
-          {options.map((option: {label: string, ref: string}) => (
-            <MenuOption href={option.ref}>{option.label}</MenuOption>
+          {options.map((option: {label: string, ref: string, id: number}) => (
+            <MenuOption style={{ marginRight: option.id !== options.length - 1 ? '30px' : '0px' }} href={option.ref}>{option.label}</MenuOption>
           ))}
         </TextContainer>
       </Container>
