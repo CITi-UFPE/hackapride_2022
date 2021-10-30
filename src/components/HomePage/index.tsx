@@ -6,8 +6,6 @@ export const HomePage: React.FC = () => (
     <div>
       <RainbowContainer>
         <Rainbow />
-        <Rainbow />
-        <Rainbow />
       </RainbowContainer>
     </div>
   </Container>
