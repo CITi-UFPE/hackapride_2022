@@ -6,6 +6,7 @@ export const SectionContainer = styled.section`
   position: fixed;
   z-index: 1000;
   background-color: #EEDED1;
+  flex-direction: column;
 `;
 
 export const Container = styled.div`
@@ -88,4 +89,13 @@ export const Lines = styled.span`
       display: none;
     }
   }
+`;
+
+export const OpenedHamburguer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
 `;
