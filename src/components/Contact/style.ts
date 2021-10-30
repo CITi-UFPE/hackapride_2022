@@ -11,14 +11,37 @@ export const Title = styled.h1`
   font-size:42px;
   width: 600px;
   text-align:center;
+  @media (max-width: 1024px) {
+    & {
+      font-size:20px;
+    }
+  }
 `;
 export const LogoContainer = styled.img`
   width:350px;
   height: 350px;
+  @media (max-width: 1024px) {
+    & {
+      width:250px;
+      height: 250px;
+    }
+  }
 `;
-export const ImageContainer = styled.div``;
+export const ImageContainer = styled.div`
+@media (max-width: 1024px) {
+    & {
+      width:100%;
+      display: flex;
+      justify-content: center;
+    }
+  }`;
 export const FormContainer = styled.div`
- 
+ @media (max-width: 1024px) {
+    & {
+      width:100%;
+    }
+  }
+
 .box {
   align-self: flex-end;
 
@@ -31,6 +54,8 @@ export const FormContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+
 }
 
 .box input,
@@ -64,6 +89,11 @@ export const FormContainer = styled.div`
   outline: none;
   border: none;
   border-bottom: 2px solid #000000;
+  @media (max-width: 1024px) {
+    & {
+      width: 100%;  
+    }
+  }
 }
 
 .box input:focus, .box select:focus, .box textarea:focus, .box input:valid, .box select:valid, .box textarea:valid {
@@ -92,6 +122,7 @@ export const FormContainer = styled.div`
   /* height: 35px; */
 
   transition: .5s;
+  
 }
 
 select option {
@@ -106,6 +137,11 @@ select option {
 
 .box form div {
   position: relative;
+}
+@media (max-width: 1024px) {
+.box form{
+  width: 80%;
+}
 }
 
 .box form div label {
@@ -124,6 +160,11 @@ select option {
   text-align: center;
   letter-spacing: 0px;
   opacity: 1;
+  @media (max-width: 1024px) {
+    & {
+      font-size: 14px;
+    }
+  }
 }
 
 .box input:focus ~ label,
@@ -148,6 +189,12 @@ select option {
 .box textarea:valid {
   border-bottom: 1px solid #F7022D;
 }
+@media (max-width: 1024px) {
+    .box {
+      width: 100%;  
+      height: 320px ;
+    }
+  }
 `;
 export const Input = styled.input`
   background-color:transparent;
@@ -179,6 +226,13 @@ export const ImageFormContainer = styled.div`
   display:flex;
   flex-direction:row;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    & {
+      width: 100%;
+      flex-direction:column;
+      align-items: center;
+    }
+  }
 `;
 export const MainContainer = styled.div`
   display:flex;
