@@ -5,6 +5,8 @@ import {
   HomeButton,
   HomeText,
   MainTitle,
+  Rainbow,
+  RainbowBubble,
   RainbowContainer,
 } from './style';
 
@@ -12,14 +14,13 @@ export const HomePage: React.FC = () => (
   <Container>
     <MainTitle>
       Se capacite, se empodere,
-    </MainTitle>
-    <MainTitle>
       se permita fazer parte de uma
-    </MainTitle>
-    <MainTitle>
       revolução.
     </MainTitle>
-    <RainbowContainer />
+    <RainbowContainer>
+      <Rainbow />
+      <RainbowBubble />
+    </RainbowContainer>
     <DateTitle>
       15, 16 e 17 de janeiro
     </DateTitle>
