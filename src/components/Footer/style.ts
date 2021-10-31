@@ -1,14 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
 export const FooterContainer = styled.div`
-  justify-content: space-between;
-  max-width: 1300px;
-  width: 100vw;
-  height: 100vh;
+  justify-content: center;
   display: flex;
   flex-direction: row;
-  margin-right: 180px;
-  margin-left: 180px;
 `;
 
 export const InverseRainbowContainer = styled.div`
@@ -21,8 +16,9 @@ export const FooterText = styled.div`
   justify-content: center;
   align-self: center;
   max-width: 300px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   font-family: Baloo;
+  margin: auto 8% 2% 8%;
   color: ${(props) => props.theme.colors.black};
 `;

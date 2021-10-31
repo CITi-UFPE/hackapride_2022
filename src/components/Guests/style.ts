@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100vh;
+  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,6 @@ export const SlickContainer = styled.div`
   align-self: center;
   width: 95%;
   max-width: 1000px;
-  height: 180px;
   .slick-slider {
     display: flex;
     justify-content: center;

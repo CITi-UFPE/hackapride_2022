@@ -8,30 +8,36 @@ import {
   Rainbow,
   RainbowBubble,
   RainbowContainer,
+  MainPage,
+  DatePage,
 } from './style';
 
 export const HomePage: React.FC = () => (
   <Container>
-    <MainTitle>
-      Se capacite, se empodere,
-      se permita fazer parte de uma
-      revolução.
-    </MainTitle>
-    <RainbowContainer>
-      <Rainbow />
-      <RainbowBubble />
-    </RainbowContainer>
-    <DateTitle>
-      15, 16 e 17 de janeiro
-    </DateTitle>
-    <HomeButton>
-      Inscreva-se
-    </HomeButton>
-    <HomeText>
-      Lectus fermentum et morbi viverra nunc, elementum tortor,
-      lacus risus.  Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. In mauris, amet, justo, pharetra adipiscing praesent nisl.
-      Nullam dignissim vel accumsan arcu proin neque
-    </HomeText>
+    <MainPage>
+      <MainTitle>
+        Se capacite, se empodere,
+        se permita fazer parte de uma
+        revolução.
+      </MainTitle>
+      <RainbowContainer>
+        <Rainbow />
+        <RainbowBubble />
+      </RainbowContainer>
+    </MainPage>
+    <DatePage>
+      <DateTitle>
+        15, 16 e 17 de janeiro
+      </DateTitle>
+      <HomeButton>
+        Inscreva-se
+      </HomeButton>
+      <HomeText>
+        Lectus fermentum et morbi viverra nunc, elementum tortor,
+        lacus risus.  Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. In mauris, amet, justo, pharetra adipiscing praesent nisl.
+        Nullam dignissim vel accumsan arcu proin neque
+      </HomeText>
+    </DatePage>
   </Container>
 );

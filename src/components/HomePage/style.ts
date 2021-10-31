@@ -1,17 +1,32 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  padding-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+`;
 
+export const MainPage = styled.div`
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const DatePage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
 `;
 
 export const MainTitle = styled.div`
+  margin-top: 100px;
   justify-content: center;
-  align-self: center;
+  text-align: center;
   max-width: 979px;
   font-size: 64px;
   font-weight: 400;

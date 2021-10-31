@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const Infos = styled.div`
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
   h3 {
     font-size: 28px;
     font-weight: 600;
