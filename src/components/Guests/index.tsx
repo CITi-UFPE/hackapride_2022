@@ -21,32 +21,30 @@ export const Guests: React.FC = () => {
     slidesToScroll: 1,
   };
   return (
-    <OutsideContainer style={{ height: '100vh' }}>
-      <Container>
-        <h1>
-          Pessoas Convidadas
-        </h1>
-        <p>
-          As premiações existem com o intuito de. ectus
-          fermentum et morbi snecas viverra nunc,
-          elementum tortor, lacus risus.
-        </p>
-        <div style={{ width: '50%' }}>
-          <SlickContainer>
-            <Slider {...settings}>
-              {album?.map((value) => (
-                <div
-                  key={value[0]}
-                  className="guests-card"
-                >
-                  <img src={value[0]} alt="" />
-                  <p>{value[1]}</p>
-                </div>
-              ))}
-            </Slider>
-          </SlickContainer>
-        </div>
-      </Container>
-    </OutsideContainer>
+    <Container>
+      <h1>
+        Pessoas Convidadas
+      </h1>
+      <p>
+        As premiações existem com o intuito de. ectus
+        fermentum et morbi snecas viverra nunc,
+        elementum tortor, lacus risus.
+      </p>
+      <div style={{ width: '50%' }}>
+        <SlickContainer>
+          <Slider {...settings}>
+            {album?.map((value) => (
+              <div
+                key={value[0]}
+                className="guests-card"
+              >
+                <img src={value[0]} alt="" />
+                <p>{value[1]}</p>
+              </div>
+            ))}
+          </Slider>
+        </SlickContainer>
+      </div>
+    </Container>
   );
 };

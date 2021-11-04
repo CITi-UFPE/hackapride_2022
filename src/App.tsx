@@ -18,8 +18,8 @@ export const App: React.FC = () => (
     <HomePage />
     <Awards />
     <Guests />
-    <Contact />
     <PartnersSection />
+    <Contact />
     <Footer />
   </ThemeProvider>
 );
