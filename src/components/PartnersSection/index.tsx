@@ -12,7 +12,7 @@ import sectionsRainbow from '../../assets/sectionsRainbow.svg';
 import { OutsideContainer } from '../../styles/globalComponents';
 
 export const PartnersSection: React.FC = () => (
-  <Infos>
+  <Infos id="Partners">
     <OutsideContainer>
       <Container>
         <img src={sectionsRainbow} alt="rainbow" />

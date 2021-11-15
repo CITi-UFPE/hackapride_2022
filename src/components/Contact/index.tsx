@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
   }, []);
 
   return (
-    <Container>
+    <Container id="Contact">
       <OutsideContainer>
         <MainContainer>
           <Title>

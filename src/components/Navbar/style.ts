@@ -61,19 +61,6 @@ export const MenuOption = styled.a`
 }
 `;
 
-export const FlowerImage = styled.img`
-  bottom: 50px;
-  position: absolute;
-  left: -80px;
-  width: 400px;
-
-  @media (max-width: 380px) {
-    & {
-      width: 350px;
-    }
-  }
-`;
-
 export const HamburguerContainer = styled.div`
 
   #checkbox-menu {
@@ -131,4 +118,55 @@ export const HamburguerLines = styled.span`
   border-radius: 30px;
   background-color: #884100;
   transition: 0.25s ease-in-out;
+`;
+
+export const HamburguerOptionsContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: ${(props) => props.theme.colors.background};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
+
+export const HamburguerOptions = styled.a`
+  font-size: 28px;
+  cursor: pointer;
+  font-family:  BalooBold;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.text};
+`;
+
+export const HamburguerButton = styled.div`
+  background-color: #28201A;
+  height: 56px;
+  width: 50%;
+  margin-top: 70px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ButtonText = styled.p`
+  color: #EEDED1;
+  font-size: 28px;
+`;
+
+export const FlowerContainer = styled.div`
+  width: 100%;
+  height: 245px;
+  margin-top: 30px;
+  position: relative;
+`;
+
+export const FlowerImage = styled.img`
 `;
