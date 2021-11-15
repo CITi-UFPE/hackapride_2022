@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import {
   SectionContainer,
@@ -5,7 +6,9 @@ import {
   Container,
   TextContainer,
   MenuOption,
-  HamburguerLines, Lines, OpenedHamburguer, FlowerImage, ButtonContainer, ButtonText,
+  FlowerImage,
+  HamburguerContainer,
+  HamburguerLines,
 } from './style';
 import { LogoHackapride, Flower } from '../../assets';
 import { OutsideContainer } from '../../styles/globalComponents';
@@ -33,51 +36,30 @@ const options = [
   },
 ];
 
-export const Navbar: React.FC = () => {
-  const [toggle, setToggle] = useState('');
-  return (
-    <>
-      <SectionContainer>
-        <OutsideContainer style={{
-          display: 'flex', justifyContent: 'center', maxWidth: '820px', backgroundColor: '#EEDED1', zIndex: 1000,
-        }}
-        >
-          <Container style={{ justifyContent: toggle ? 'flex-end' : 'space-between' }}>
-            {!toggle && <LogoImage src={LogoHackapride} />}
-            <HamburguerLines
-              onClick={() => {
-                if (toggle === 'active') {
-                  setToggle('');
-                } else {
-                  setToggle('active');
-                }
-              }}
-            >
-              <Lines style={{ transform: toggle ? 'rotate(45deg)' : 'none', top: toggle ? '0px' : '', position: toggle ? 'absolute' : 'relative' }} />
-              <Lines style={{ transform: toggle ? 'rotate(-45deg)' : 'none' }} />
-              <Lines style={{ display: toggle ? 'none' : 'block' }} />
-            </HamburguerLines>
-            {!toggle && (
-            <TextContainer>
-              {options.map((option: {label: string, ref: string, id: number}) => (
-                <MenuOption style={{ marginRight: option.id !== options.length - 1 ? '30px' : '0px' }} href={option.ref}>{option.label}</MenuOption>
-              ))}
-            </TextContainer>
-            )}
-          </Container>
-        </OutsideContainer>
-        {toggle && (
-        <OpenedHamburguer>
-          {options.map((option: {label: string, ref: string, id: number}) => (
-            <MenuOption style={{ marginTop: '40px', fontSize: '28px' }} href={option.ref}>{option.label}</MenuOption>
-          ))}
-          <ButtonContainer>
-            <ButtonText>INSCREVA-SE</ButtonText>
-          </ButtonContainer>
-          <FlowerImage src={Flower} />
-        </OpenedHamburguer>
-        )}
-      </SectionContainer>
-    </>
-  );
-};
+export const Navbar: React.FC = () => (
+  <>
+    <SectionContainer>
+      <OutsideContainer style={{
+        display: 'flex', justifyContent: 'center', maxWidth: '820px', backgroundColor: '#EEDED1', zIndex: 1000,
+      }}
+      >
+        <Container>
+          <LogoImage src={LogoHackapride} />
+          <HamburguerContainer>
+            <input type="checkbox" id="checkbox-menu" />
+            <label htmlFor="checkbox-menu">
+              <HamburguerLines />
+              <HamburguerLines />
+              <HamburguerLines />
+            </label>
+          </HamburguerContainer>
+          <TextContainer>
+            {options.map((option: {label: string, ref: string, id: number}) => (
+              <MenuOption style={{ marginRight: option.id !== options.length - 1 ? '30px' : '0px' }} href={option.ref}>{option.label}</MenuOption>
+            ))}
+          </TextContainer>
+        </Container>
+      </OutsideContainer>
+    </SectionContainer>
+  </>
+);

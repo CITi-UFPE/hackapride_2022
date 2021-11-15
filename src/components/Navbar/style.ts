@@ -61,50 +61,6 @@ export const MenuOption = styled.a`
 }
 `;
 
-export const HamburguerLines = styled.label`
-  cursor: pointer;
-  position: relative;
-  display: block;
-  height: 24px;
-  width: 30px;
-
-  @media (min-width: 910px) {
-    & {
-      display: none;
-    }
-  }
-`;
-
-export const Lines = styled.span`
-  display: block;
-  margin-bottom: 5px;
-  border-radius: 50px;
-  height: 6px;
-  width: 100%;
-  background-color: #884100;
-  transition: 0.25s ease-in-out;
-
-  @media (min-width: 910px) {
-    & {
-      display: none;
-    }
-  }
-`;
-
-export const OpenedHamburguer = styled.div`
-  display: flex;
-  margin-top: 99px;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  position: absolute;
-  background-color: ${(props) => props.theme.colors.background};;
-  overflow-y: scroll;
-  overflow-x: hidden;
-`;
-
 export const FlowerImage = styled.img`
   bottom: 50px;
   position: absolute;
@@ -118,20 +74,61 @@ export const FlowerImage = styled.img`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  width: 60%;
-  border: 3px;
-  border-color: #28201A;
-  border-style: solid;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  border-radius: 8px;
-  padding: 5px 10px;
+export const HamburguerContainer = styled.div`
+
+  #checkbox-menu {
+    position: absolute;
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 24px;
+    width: 30px;
+  }
+
+  label span:nth-child(1) {
+    top: 0;
+  }
+
+  label span:nth-child(2) {
+    top: 10px;
+  }
+
+  label span:nth-child(3) {
+    top: 20px;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  @media (min-width: 910px) {
+    & {
+      display: none;
+    }
+  }
+
 `;
 
-export const ButtonText = styled.p`
-  color: #28201A;
-  font-size: 28px;
+export const HamburguerLines = styled.span`
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #884100;
+  transition: 0.25s ease-in-out;
 `;
