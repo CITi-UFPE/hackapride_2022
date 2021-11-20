@@ -61,77 +61,112 @@ export const MenuOption = styled.a`
 }
 `;
 
-export const HamburguerLines = styled.label`
-  cursor: pointer;
-  position: relative;
-  display: block;
-  height: 24px;
-  width: 30px;
+export const HamburguerContainer = styled.div`
+
+  #checkbox-menu {
+    position: absolute;
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 24px;
+    width: 30px;
+  }
+
+  label span:nth-child(1) {
+    top: 0;
+  }
+
+  label span:nth-child(2) {
+    top: 10px;
+  }
+
+  label span:nth-child(3) {
+    top: 20px;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
 
   @media (min-width: 910px) {
     & {
       display: none;
     }
   }
+
 `;
 
-export const Lines = styled.span`
+export const HamburguerLines = styled.span`
+  position: absolute;
   display: block;
-  margin-bottom: 5px;
-  border-radius: 50px;
   height: 6px;
   width: 100%;
+  border-radius: 30px;
   background-color: #884100;
   transition: 0.25s ease-in-out;
-
-  @media (min-width: 910px) {
-    & {
-      display: none;
-    }
-  }
 `;
 
-export const OpenedHamburguer = styled.div`
-  display: flex;
-  margin-top: 99px;
-  flex-direction: column;
-  align-items: center;
+export const HamburguerOptionsContainer = styled.div`
   width: 100%;
   height: 100vh;
-  z-index: 1000;
-  position: absolute;
-  background-color: ${(props) => props.theme.colors.background};;
-  overflow-y: scroll;
-  overflow-x: hidden;
-`;
-
-export const FlowerImage = styled.img`
-  bottom: 50px;
-  position: absolute;
-  left: -80px;
-  width: 400px;
-
-  @media (max-width: 380px) {
-    & {
-      width: 350px;
-    }
-  }
-`;
-
-export const ButtonContainer = styled.div`
   background-color: ${(props) => props.theme.colors.background};
-  width: 60%;
-  border: 3px;
-  border-color: #28201A;
-  border-style: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
+
+export const HamburguerOptions = styled.a`
+  font-size: 28px;
+  cursor: pointer;
+  font-family:  BalooBold;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.text};
+`;
+
+export const HamburguerButton = styled.div`
+  background-color: #28201A;
+  height: 56px;
+  width: 50%;
+  margin-top: 70px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  border-radius: 8px;
-  padding: 5px 10px;
+  align-items: center;
 `;
 
 export const ButtonText = styled.p`
-  color: #28201A;
+  color: #EEDED1;
   font-size: 28px;
+`;
+
+export const FlowerContainer = styled.div`
+  width: 100%;
+  height: 245px;
+  margin-top: 30px;
+  position: relative;
+`;
+
+export const FlowerImage = styled.img`
 `;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import {
   SectionContainer,
@@ -5,36 +6,49 @@ import {
   Container,
   TextContainer,
   MenuOption,
-  HamburguerLines, Lines, OpenedHamburguer, FlowerImage, ButtonContainer, ButtonText,
+  HamburguerContainer,
+  HamburguerLines,
+  HamburguerOptionsContainer,
+  HamburguerOptions,
+  HamburguerButton,
+  ButtonText,
+  FlowerContainer,
+  FlowerImage,
 } from './style';
-import { LogoHackapride, Flower } from '../../assets';
+import { LogoHackapride, NavbarFlower } from '../../assets';
 import { OutsideContainer } from '../../styles/globalComponents';
 
 const options = [
   {
     label: 'INFORMAÇÕES',
-    ref: '',
+    ref: '#Awards',
     id: 0,
   },
   {
     label: 'CONVIDADOS',
-    ref: '',
+    ref: '#Guests',
     id: 1,
   },
   {
     label: 'PARCEIROS',
-    ref: '',
+    ref: '#Partners',
     id: 2,
   },
   {
     label: 'CONTATO',
-    ref: '',
+    ref: '#Contact',
     id: 3,
   },
 ];
 
 export const Navbar: React.FC = () => {
-  const [toggle, setToggle] = useState('');
+  const [toggle, setToggle] = useState(false);
+
+  const BackToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <>
       <SectionContainer>
@@ -42,40 +56,35 @@ export const Navbar: React.FC = () => {
           display: 'flex', justifyContent: 'center', maxWidth: '820px', backgroundColor: '#EEDED1', zIndex: 1000,
         }}
         >
-          <Container style={{ justifyContent: toggle ? 'flex-end' : 'space-between' }}>
-            {!toggle && <LogoImage src={LogoHackapride} />}
-            <HamburguerLines
-              onClick={() => {
-                if (toggle === 'active') {
-                  setToggle('');
-                } else {
-                  setToggle('active');
-                }
-              }}
-            >
-              <Lines style={{ transform: toggle ? 'rotate(45deg)' : 'none', top: toggle ? '0px' : '', position: toggle ? 'absolute' : 'relative' }} />
-              <Lines style={{ transform: toggle ? 'rotate(-45deg)' : 'none' }} />
-              <Lines style={{ display: toggle ? 'none' : 'block' }} />
-            </HamburguerLines>
-            {!toggle && (
+          <Container>
+            <LogoImage src={LogoHackapride} onClick={() => BackToTop()} />
+            <HamburguerContainer>
+              <input type="checkbox" id="checkbox-menu" checked={toggle} onClick={() => setToggle(!toggle)} />
+              <label htmlFor="checkbox-menu">
+                <HamburguerLines />
+                <HamburguerLines />
+                <HamburguerLines />
+              </label>
+            </HamburguerContainer>
             <TextContainer>
               {options.map((option: {label: string, ref: string, id: number}) => (
                 <MenuOption style={{ marginRight: option.id !== options.length - 1 ? '30px' : '0px' }} href={option.ref}>{option.label}</MenuOption>
               ))}
             </TextContainer>
-            )}
           </Container>
         </OutsideContainer>
         {toggle && (
-        <OpenedHamburguer>
+        <HamburguerOptionsContainer>
           {options.map((option: {label: string, ref: string, id: number}) => (
-            <MenuOption style={{ marginTop: '40px', fontSize: '28px' }} href={option.ref}>{option.label}</MenuOption>
+            <HamburguerOptions onClick={() => setToggle(false)} style={{ marginTop: option.id === 0 ? '40px' : '70px' }} href={option.ref}>{option.label}</HamburguerOptions>
           ))}
-          <ButtonContainer>
+          <HamburguerButton>
             <ButtonText>INSCREVA-SE</ButtonText>
-          </ButtonContainer>
-          <FlowerImage src={Flower} />
-        </OpenedHamburguer>
+          </HamburguerButton>
+          <FlowerContainer>
+            <FlowerImage src={NavbarFlower} />
+          </FlowerContainer>
+        </HamburguerOptionsContainer>
         )}
       </SectionContainer>
     </>

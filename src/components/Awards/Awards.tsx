@@ -11,7 +11,7 @@ import {
 
 export const Awards: React.FC = () => (
   <>
-    <ContainerAwards>
+    <ContainerAwards id="Awards">
       <StarWebImage src={StarsWebLeft} />
 
       <StarMobileImage src={StarsMobileLeft} />
