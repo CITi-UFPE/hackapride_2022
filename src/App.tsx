@@ -16,10 +16,10 @@ export const App: React.FC = () => (
     <GlobalStyle />
     <Navbar />
     <HomePage />
-    {/* <Awards />
+    <Awards />
     <Guests />
     <PartnersSection />
     <Contact />
-    <Footer /> */}
+    <Footer />
   </ThemeProvider>
 );
