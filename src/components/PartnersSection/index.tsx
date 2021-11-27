@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 import {
   Infos,
@@ -10,31 +11,37 @@ import {
 import sectionsRainbow from '../../assets/sectionsRainbow.svg';
 
 import { OutsideContainer } from '../../styles/globalComponents';
+import { mainUrl } from '../../styles/global';
 
-export const PartnersSection: React.FC = () => (
-  <Infos id="Partners">
-    <OutsideContainer>
-      <Container>
-        <img src={sectionsRainbow} alt="rainbow" />
-        <h3>Parcerias</h3>
-        <p>
-          Ectus fermentum et morbi snecas viverra nunc,
-          elementum tortor,acus risus.  Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.In mauris, amet, justo,
-          pharetra adipiscing praesent nisl. Nullam dignissim
-          vel accumsan arcu proin neque vel cras.
-        </p>
-        <PartnersPhotos>
-          <Photo />
-          <Photo />
-          <Photo />
-          <Photo />
-          <Photo />
-          <Photo />
-          <Photo />
-          <Photo />
-        </PartnersPhotos>
-      </Container>
-    </OutsideContainer>
-  </Infos>
-);
+export const PartnersSection: React.FC = () => {
+  const [description, setDescription] = useState('');
+  const [partnersPhotos, setPartnersPhotos] = useState([{ url: '' }]);
+
+  const getInfos = async () => {
+    const res = await axios.get(`${mainUrl}/partners`);
+    const { text, images } = res.data;
+    setDescription(text);
+    setPartnersPhotos(images);
+  };
+
+  useEffect(() => {
+    getInfos();
+  }, []);
+
+  return (
+    <Infos id="Partners">
+      <OutsideContainer>
+        <Container>
+          <img src={sectionsRainbow} alt="rainbow" />
+          <h3>Parcerias</h3>
+          <p>{description}</p>
+          <PartnersPhotos>
+            {partnersPhotos.map((photo) => (
+              <Photo src={photo.url} />
+            ))}
+          </PartnersPhotos>
+        </Container>
+      </OutsideContainer>
+    </Infos>
+  );
+};

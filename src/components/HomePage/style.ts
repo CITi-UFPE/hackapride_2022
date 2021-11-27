@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -65,7 +65,7 @@ export const HomeButton = styled.div`
   font-family: BalooExtraBold;
   padding: 14px 20px;
   border-radius: 10px;
-  margin-top: 72px
+  margin-top: 72px;
 `;
 
 export const HomeText = styled.div`
@@ -79,55 +79,16 @@ export const HomeText = styled.div`
   color: ${(props) => props.theme.colors.black};
 `;
 
-const RainbowAnimation = keyframes` up-down {
-  0% {
-      top: 0;
+export const WebRainbow = styled.img`
+  width: 200px;
+  @media(max-width: 720px) {
+    display: none;
   }
-  100% {
-      top: 156px;
-  }
-}
 `;
 
-export const Rainbow = styled.div`
-  position: absolute;
-  top: -80%;
-  width: 100%;
-  height: 100%;
-  border-radius: 22px;
-  background-color: #BC86E2;
-  -webkit-animation-name: up-down;
-          animation-name: up-down;
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
-  -webkit-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-          animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-`;
-
-export const RainbowBubble = styled.div`
-  position: absolute;
-  top: 0;
-  width: 44px;
-  height: 44px;
-  margin: auto;
-  border-radius: 100%;
-  background-color: #8861A4;
-  -webkit-animation-name: up-down;
-            animation-name: up-down;
-    -webkit-animation-duration: 1.3s;
-            animation-duration: 1.3s;
-    -webkit-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-            animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate;
+export const MobileRainbow = styled.img`
+  width: 130px;
+  @media(min-width: 720px) {
+    display: none;
+  }
 `;

@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import axios from 'axios';
 import { Container, SlickContainer } from './style';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { OutsideContainer } from '../../styles/globalComponents';
-import { Logo } from '../../assets';
-
-const album = [
-  [Logo, 'foto 01'],
-  [Logo, 'foto 02'],
-  [Logo, 'foto 03'],
-];
+import { mainUrl } from '../../styles/global';
 
 export const Guests: React.FC = () => {
+  const [description, setDescription] = useState('');
+  const [slickPhotos, setSlickPhotos] = useState([{ url: '', caption: '' }]);
+
+  const getInfos = async () => {
+    const res = await axios.get(`${mainUrl}/guests`);
+    const { text, images } = res.data;
+    setDescription(text);
+    setSlickPhotos(images);
+  };
+
+  useEffect(() => {
+    getInfos();
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -26,20 +34,18 @@ export const Guests: React.FC = () => {
         Pessoas Convidadas
       </h1>
       <p>
-        As premiações existem com o intuito de. ectus
-        fermentum et morbi snecas viverra nunc,
-        elementum tortor, lacus risus.
+        {description}
       </p>
       <div style={{ width: '50%' }}>
         <SlickContainer>
           <Slider {...settings}>
-            {album?.map((value) => (
+            {slickPhotos?.map((value) => (
               <div
-                key={value[0]}
+                key={value.url}
                 className="guests-card"
               >
-                <img src={value[0]} alt="" />
-                <p>{value[1]}</p>
+                <img src={value.url} alt="" />
+                <p>{value.caption}</p>
               </div>
             ))}
           </Slider>

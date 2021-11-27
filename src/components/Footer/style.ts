@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
   justify-content: center;
@@ -6,10 +6,11 @@ export const FooterContainer = styled.div`
   flex-direction: row;
 `;
 
-export const InverseRainbowContainer = styled.div`
-  width: 272px;
-  height: 532px;
-  background-color: #f00;
+export const InverseRainbowContainer = styled.img`
+  width: 200px;
+  @media(max-width: 720px) {
+    width: 130px;
+  }
 `;
 
 export const FooterText = styled.div`

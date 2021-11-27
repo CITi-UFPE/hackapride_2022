@@ -3,6 +3,8 @@ import BalooBold from '../assets/Baloo2-Bold.ttf';
 import BalooExtraBold from '../assets/Baloo2-ExtraBold.ttf';
 import BalooRegular from '../assets/Baloo2-Regular.ttf';
 
+export const mainUrl = 'http://localhost:1337';
+
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
   * {

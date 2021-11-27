@@ -11,7 +11,7 @@ export const Infos = styled.div`
   h3 {
     font-size: 28px;
     font-weight: 600;
-    color: ${(props) => props.theme.colors.black};
+    color: ${theme.colors.black};
     margin: -20px;
   }
 
@@ -33,23 +33,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
 `;
 
 export const PartnersPhotos = styled.div`
   margin-top: 80px;
   display: grid;
   grid-template-areas:
-              "p p p p"
-              "p p p p";
+    "p p p p"
+    "p p p p";
   gap: 2em 5em;
 
   @media(max-width: 720px) {
     grid-template-areas:
-              "p p"
-              "p p"
-              "p p"
-              "p p";
+      "p p"
+      "p p"
+      "p p"
+      "p p";
   }
 
   @media(max-width: 420px) {
@@ -57,11 +56,10 @@ export const PartnersPhotos = styled.div`
   }
 `;
 
-export const Photo = styled.div`
+export const Photo = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: ${(props) => props.theme.colors.grey};
 
   @media(max-width: 420px) {
     width: 70px;
