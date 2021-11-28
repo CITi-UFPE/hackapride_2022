@@ -8,6 +8,7 @@ import Rainbow from './rainbow.svg';
 import LogoHackapride from './logo_hackapride.svg';
 import Flower from './flower.svg';
 import NavbarFlower from './navbar_flower.svg';
+import ColorsBars from './colors_bars.svg';
 
 export {
   Logo,
@@ -20,4 +21,5 @@ export {
   Rainbow,
   Flower,
   NavbarFlower,
+  ColorsBars,
 };

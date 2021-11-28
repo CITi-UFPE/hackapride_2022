@@ -16,6 +16,9 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${(props) => props.theme.colors.background};
+  @media (max-width: 910px) {
+    height: 70px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -24,6 +27,7 @@ export const ContentContainer = styled.div`
 
 export const LogoImage = styled.img`
   height: 24px;
+  cursor: pointer;
 `;
 
 export const TextContainer = styled.div`
