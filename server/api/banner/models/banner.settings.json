@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "banners",
+  "info": {
+    "name": "Banner",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

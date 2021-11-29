@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/awards",
+      "handler": "awards.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/awards",
+      "handler": "awards.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/awards",
+      "handler": "awards.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
