@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { mainUrl } from '../../styles/global';
 import {
   Container,
-  DateTitle,
-  HomeButton,
-  HomeText,
-  MainTitle,
-  MainPage,
-  DatePage,
+  ContentContainer,
+  Button,
+  ButtonText,
+  TitleText,
+  SubtitleText,
+  MainText,
   WebRainbow,
   MobileRainbow,
 } from './style';
@@ -31,26 +31,28 @@ export const HomePage: React.FC = () => {
 
   return (
     <Container id="Home">
-      <MainPage>
-        <MainTitle>
+      <ContentContainer>
+        <TitleText>
           Se capacite, se empodere,
+          <br />
           se permita fazer parte de uma
+          <br />
           revolução.
-        </MainTitle>
+        </TitleText>
         <WebRainbow src={WebRainbowPhoto} />
         <MobileRainbow src={MobileRainbowPhoto} />
-      </MainPage>
-      <DatePage>
-        <DateTitle>
+        <SubtitleText>
           15, 16 e 17 de janeiro
-        </DateTitle>
-        <HomeButton>
-          Inscreva-se
-        </HomeButton>
-        <HomeText>
+          <br />
+          na casa de Alana!
+        </SubtitleText>
+        <Button>
+          <ButtonText>INSCREVA-SE</ButtonText>
+        </Button>
+        <MainText>
           {description}
-        </HomeText>
-      </DatePage>
+        </MainText>
+      </ContentContainer>
     </Container>
   );
 };
