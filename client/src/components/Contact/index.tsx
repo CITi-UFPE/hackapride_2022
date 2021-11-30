@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import url from '../api/apiURL';
+import { mainUrl } from '../../styles/global';
 
 import {
   MainContainer,
@@ -55,11 +55,12 @@ export const Contact: React.FC = () => {
 
   const sendMaile = async () => {
     try {
-      const db = await axios.post(`${url.url}/api/contato`, {
+      const db = await axios.post(`${mainUrl}/sendemail`, {
         name,
         phone,
         subject,
         message,
+        email: 'hackapride@gmail.com',
       });
       console.log(name, phone, subject, message);
       if (db.status === 200) { toast('Mensagem enviada!'); limpaCampos(); }
@@ -79,9 +80,9 @@ export const Contact: React.FC = () => {
   };
 
   const loadInfo = async () => {
-    const res = await axios.get(`${url.url}/api/social`);
+    const res = await axios.get(`${mainUrl}/api/social`);
     setDados(res.data);
-    const link2 = await axios.get(`${url.url}/api/ticket`);
+    const link2 = await axios.get(`${mainUrl}/api/ticket`);
     setLink(link2.data);
   };
 
