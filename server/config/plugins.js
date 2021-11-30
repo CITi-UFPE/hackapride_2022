@@ -11,4 +11,18 @@ module.exports = ({ env }) => ({
       delete: {},
     },
   },
+  email: {
+    provider: 'nodemailer',
+    providerOptions: {
+      host: 'smtp.gmail.com',
+      port: 465,
+      auth: {
+        user: env('EMAIL_SMTP_USER'),
+        pass: env('EMAIL_SMTP_PASS'),
+      },
+    },
+    settings: {
+      defaultFrom: 'Hackapride Site',
+    },
+  },
 });
