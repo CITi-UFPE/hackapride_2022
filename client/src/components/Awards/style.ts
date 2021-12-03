@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerAwards = styled.div`
-  height: calc(100vh - 100px);
-
+  margin-top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,9 +50,7 @@ export const StarsMobileAwards = styled.div`
 `;
 
 export const TextBodyAwards = styled.div`
-  padding-top: 3rem;
   width: 80%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +67,7 @@ export const HeaderAwards = styled.div`
 export const TitleAwards = styled.div`
   font-family:  BalooExtraBold;
   color: #28201A;
-  font-size: 44px;
+  font-size: 36px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
@@ -82,12 +79,12 @@ export const TitleAwards = styled.div`
 
 export const SubTitleAwards = styled.div`
   display: flex;
+  padding: 0px 70px 0 70px;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   padding-bottom: 6rem;
   font-family: BalooExtraBold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 106.9%;
   text-align: center;
   letter-spacing: 0.09em;
@@ -133,10 +130,11 @@ export const ListItemAwards = styled.div`
 `;
 
 export const Description = styled.div`
-  padding-left: 20px;
+  padding: 0px 80px 0px 20px;
   font-family:  BalooBold;
   font-size: 20px;
   line-height: 106.9%;
+
   @media (max-width: 830px) {
       font-size: 14px;
       padding: 0;
@@ -151,7 +149,7 @@ export const SupremeTitleAwards = styled.div`
   padding-bottom: 1.7rem;
   font-family:  BalooExtraBold;
   color: #28201A;
-  font-size: 44px;
+  font-size: 36px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;

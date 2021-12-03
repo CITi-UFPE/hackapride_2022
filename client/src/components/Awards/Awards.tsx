@@ -86,7 +86,7 @@ export const Awards: React.FC = () => {
       </ContainerAwards>
 
       <SubTitleAwardsMobile>
-        As premiações existem com o intuito de. ectus fermentum et morbi snecas viverra nunc, elementum tortor, lacus risus.
+        {description}
       </SubTitleAwardsMobile>
     </>
   );
