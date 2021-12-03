@@ -2,20 +2,21 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const Infos = styled.div`
-  height: calc(100vh - 100px);
+  margin: 10em 0 15em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  color: ${theme.colors.black};
 
   h3 {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 600;
-    color: ${theme.colors.black};
     margin: -20px;
   }
 
   p {
+    font-size: 20px;
     width: 60%;
     margin-top: 35px;
   }
@@ -25,6 +26,11 @@ export const Infos = styled.div`
  @media(max-width: 420px) {
   p {
     width: 80%;
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 24px;
   }
  }
 `;

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const ContainerAwards = styled.div`
-  margin-top: 90px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,14 +27,19 @@ export const ContainerAwards = styled.div`
     font-size: 20px;
     margin-top: 24px;
     line-height: 32px;
-    @media (max-width: 720px) {
+  }
+
+  @media (max-width: 720px) {
+    margin-top: 30px;
+
+    p {
       font-size: 16px;
       margin-top: 0;
     }
-  }
 
-  img {
-    width: 25%;
+    h1 {
+      font-size: 28px;
+    }    
   }
 `;
 
@@ -61,27 +72,28 @@ export const TextBodyAwards = styled.div`
 `;
 
 export const HeaderAwards = styled.div`
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const TitleAwards = styled.div`
-  font-family:  BalooExtraBold;
+  display: flex;
+  align-items: center;
+  font-family: BalooExtraBold;
   color: #28201A;
   font-size: 36px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
-  width: 30%;
   @media (max-width: 830px) {
-      font-size: 24px;
+      font-size: 20px;
     }
 `;
 
 export const SubTitleAwards = styled.div`
-  display: flex;
-  padding: 0px 70px 0 70px;
-  justify-content: center;
-  align-items: center;
+  width: 60%;
   padding-bottom: 6rem;
   font-family: BalooExtraBold;
   font-size: 20px;
@@ -108,36 +120,53 @@ export const SubTitleAwardsMobile = styled.div`
     line-height: 106.9%;
     text-align: center;
     letter-spacing: 0.09em;
-    font-size: 14px;
+    font-size: 16px;
     color: #78706A;
-    padding-left: 12px;
-    padding-right: 12px;
+    width: 65%;
   }
 
 `;
 
+export const AwardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+`;
+
 export const ListAwards = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 50px;
+
+  @media(max-width: 830px) {
+    gap: 15px;
+  }
 `;
 
 export const ListItemAwards = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
   padding-bottom: 3rem;
   @media (max-width: 830px) {
       flex-direction: column;
+      gap: 10px;
     }
 `;
 
 export const Description = styled.div`
-  padding: 0px 80px 0px 20px;
+  width: 40%;
   font-family:  BalooBold;
   font-size: 20px;
   line-height: 106.9%;
 
   @media (max-width: 830px) {
-      font-size: 14px;
+      font-size: 16px;
       padding: 0;
+      width: 100%;
     }
 `;
 
@@ -155,21 +184,24 @@ export const SupremeTitleAwards = styled.div`
   letter-spacing: 0.05em;
   @media (max-width: 830px) {
       font-size: 24px;
+      line-height: 20%;
     }
 `;
 
 export const RainbowImage = styled.img`
-  height: 44px;
-  width: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 830px) {
+    transform: scale(.8);
+  }
 `;
 
 export const StarWebImage = styled.img`
-  width: 70px;
-  height: 250px;
+  transform: scale(.6);
+
   @media (max-width: 830px) {
       display: none;
     }
@@ -182,7 +214,6 @@ export const StarMobileImage = styled.img`
   }
   
   @media (max-width: 830px) {
-    width: 70px;
-    height: 250px;
-    }
+    transform: scale(0.9);
+  }
 `;

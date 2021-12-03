@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import axios from 'axios';
-import { Container, SlickContainer } from './style';
+import { Container, SlickContainer, Tittle } from './style';
+import { Rainbow } from '../../assets';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { mainUrl } from '../../styles/global';
@@ -30,9 +31,10 @@ export const Guests: React.FC = () => {
   };
   return (
     <Container id="Guests">
-      <h1>
-        Pessoas Convidadas
-      </h1>
+      <Tittle>
+        <img src={Rainbow} alt="rainbow" />
+        <h1>Pessoas Convidadas</h1>
+      </Tittle>
       <p>
         {description}
       </p>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
-  ContainerAwards, TextBodyAwards, TitleAwards,
+  Container, ContainerAwards, TextBodyAwards, TitleAwards, AwardsContainer,
   HeaderAwards, SubTitleAwards, ListAwards, ListItemAwards, Description, SupremeTitleAwards,
   RainbowImage, StarWebImage, SubTitleAwardsMobile, StarMobileImage,
 } from './style';
@@ -29,15 +29,11 @@ export const Awards: React.FC = () => {
   }, []);
 
   return (
-    <>
+
+    <Container>
       <ContainerAwards id="Awards">
-        <StarWebImage src={StarsWebLeft} />
-
-        <StarMobileImage src={StarsMobileLeft} />
-
         <TextBodyAwards>
           <HeaderAwards>
-
             <SupremeTitleAwards>
               <RainbowImage src={Rainbow} />
               Premiações
@@ -46,48 +42,44 @@ export const Awards: React.FC = () => {
               {description}
             </SubTitleAwards>
           </HeaderAwards>
-
           <ListAwards>
-            <ListItemAwards>
-              <TitleAwards>
-                1º Lugar
-              </TitleAwards>
-              <Description>
-                Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-              </Description>
-            </ListItemAwards>
-
-            <ListItemAwards>
-              <TitleAwards>
-                2º Lugar
-              </TitleAwards>
-              <Description>
-                Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-              </Description>
-            </ListItemAwards>
-
-            <ListItemAwards>
-              <TitleAwards>
-                3º Lugar
-              </TitleAwards>
-              <Description>
-                Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
-              </Description>
-            </ListItemAwards>
-
+            <StarWebImage src={StarsWebLeft} />
+            <StarMobileImage src={StarsMobileLeft} />
+            <AwardsContainer>
+              <ListItemAwards>
+                <TitleAwards>
+                  1º Lugar
+                </TitleAwards>
+                <Description>
+                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                </Description>
+              </ListItemAwards>
+              <ListItemAwards>
+                <TitleAwards>
+                  2º Lugar
+                </TitleAwards>
+                <Description>
+                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                </Description>
+              </ListItemAwards>
+              <ListItemAwards>
+                <TitleAwards>
+                  3º Lugar
+                </TitleAwards>
+                <Description>
+                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                </Description>
+              </ListItemAwards>
+            </AwardsContainer>
+            <StarMobileImage src={StarsMobileRight} />
+            <StarWebImage src={StarsWebRight} />
           </ListAwards>
-
         </TextBodyAwards>
-
-        <StarMobileImage src={StarsMobileRight} />
-
-        <StarWebImage src={StarsWebRight} />
-
       </ContainerAwards>
-
       <SubTitleAwardsMobile>
         {description}
       </SubTitleAwardsMobile>
-    </>
+    </Container>
+
   );
 };

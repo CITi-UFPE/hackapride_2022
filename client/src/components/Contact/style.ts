@@ -4,16 +4,20 @@ export const Container = styled.div`
   display:flex;
   width: 100%;
   justify-content: center;
+  margin-bottom: 125px;
 `;
 
 export const Title = styled.h1`
-  color:#28201A;
-  font-size:42px;
-  width: 600px;
+  color: #28201A;
+  font-size: 36px;
+  margin-bottom: 30px;
+  width: 50%;
   text-align:center;
   @media (max-width: 1024px) {
     & {
-      font-size:20px;
+      font-size: 24px;
+      width: 80%;
+      margin-bottom: 10px;
     }
   }
 `;
@@ -33,6 +37,7 @@ export const ImageContainer = styled.div`
       width:100%;
       display: flex;
       justify-content: center;
+      margin-bottom: 50px;
     }
   }`;
 export const FormContainer = styled.div`
