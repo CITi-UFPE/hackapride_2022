@@ -14,13 +14,13 @@ export const ContentContainer = styled.div`
   padding: 200px 30px 80px 30px;
 
   @media (max-width: 910px) {
-    padding: 170px 30px 80px 30px;
+    padding: 120px 30px 40px 30px;
   }
 `;
 
 export const TitleText = styled.p`
   color: ${(props) => props.theme.colors.black};
-  font-size: 50px;
+  font-size: 46px;
   font-weight: 400;
   font-family: BalooExtraBold;
   text-align: center;
@@ -28,13 +28,13 @@ export const TitleText = styled.p`
   line-height: 100.4%;
 
   @media (max-width: 910px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 `;
 
 export const SubtitleText = styled.p`
   color: ${(props) => props.theme.colors.black};
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 400;
   font-family: BalooExtraBold;
   padding: 14px 20px;
@@ -98,10 +98,11 @@ export const MainText = styled.p`
   font-family: BalooExtraBold;
   text-align: center;
   margin-top: 130px;
-  width: 800px;
+  width: 55%;
 
   @media (max-width: 910px) {
     font-size: 14px;
     margin-top: 70px;
+    width: 80%;
   }
 `;

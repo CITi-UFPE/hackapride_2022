@@ -1,37 +1,60 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
-  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  h1 {
-    font-size: 54px;
-    color: ${(props) => props.theme.colors.primary};
-    text-align: center;
-    @media (max-width: 720px) {
-      font-size: 28px;
-    }
-  }
+  margin-top: 8em;
 
   p {
+    width: 40%;
     font-size: 20px;
-    margin-top: 24px;
     line-height: 32px;
-    @media (max-width: 720px) {
-      font-size: 16px;
-      margin-top: 0;
-    }
+    text-align: center;
+    color: ${theme.colors.black};
   }
 
   img {
     width: 25%;
   }
+
+  @media(max-width: 720px) {
+    margin-top: 0;
+
+    p {
+      font-size: 16px;
+      margin-top: 0;
+      width: 80%;
+      line-height: 100.4%;
+    }
+  }
+`;
+
+export const Tittle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  img {
+    width: 45px;
+    height: 45px;
+  }
+
+  h1 {
+    margin-top: -15px;
+    font-size: 36px;
+    color: ${(props) => props.theme.colors.primary};
+    text-align: center;
+    @media (max-width: 720px) {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const SlickContainer = styled.div`
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -60,5 +83,9 @@ export const SlickContainer = styled.div`
     height: 270px;
     width: 100%;
     object-fit: cover;
+  }
+
+  @media(max-width: 720px) {
+    margin-top: 30px;
   }
 `;
