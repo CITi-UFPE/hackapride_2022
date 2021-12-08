@@ -51,7 +51,7 @@ export const Awards: React.FC = () => {
                   1º Lugar
                 </TitleAwards>
                 <Description>
-                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                  Em breve
                 </Description>
               </ListItemAwards>
               <ListItemAwards>
@@ -59,7 +59,7 @@ export const Awards: React.FC = () => {
                   2º Lugar
                 </TitleAwards>
                 <Description>
-                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                  Em breve
                 </Description>
               </ListItemAwards>
               <ListItemAwards>
@@ -67,7 +67,7 @@ export const Awards: React.FC = () => {
                   3º Lugar
                 </TitleAwards>
                 <Description>
-                  Lectus fermentum et morbi viverra nunc, elementum tortor, lacus risus.  Lorem ipsum.
+                  Em breve
                 </Description>
               </ListItemAwards>
             </AwardsContainer>

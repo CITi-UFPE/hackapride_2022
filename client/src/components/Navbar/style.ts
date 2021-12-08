@@ -132,6 +132,7 @@ export const HamburguerOptionsContainer = styled.div`
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
+  transition: all 1s linear;
 
   ::-webkit-scrollbar{
     display: none;

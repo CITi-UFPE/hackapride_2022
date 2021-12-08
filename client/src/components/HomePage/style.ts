@@ -23,6 +23,7 @@ export const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `;
 
 export const ContentContainer = styled.div`
@@ -30,10 +31,16 @@ export const ContentContainer = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 12% 30px 80px 30px;
-
+  width: 90%;
+  max-width: 1280px;
   @media (max-width: 910px) {
     padding: 120px 30px 40px 30px;
   }
+
+  @media (min-width: 1600px) {
+    padding: 100px 30px 80px 30px;
+  }
+
 `;
 
 export const TitleText = styled.p`
@@ -60,7 +67,6 @@ export const SubtitleText = styled.p`
   margin-top: 72px;
   text-align: center;
   line-height: 100.4%;
-  margin-top: 72px;
 
   @media (max-width: 910px) {
     font-size: 24px;
@@ -123,8 +129,9 @@ export const MainText = styled.p`
   letter-spacing: 0.09em;
   font-family: BalooExtraBold;
   text-align: center;
-  margin-top: 130px;
+  margin-top: 100px;
   width: 55%;
+  max-width: 100%;
 
   @media (max-width: 910px) {
     font-size: 14px;

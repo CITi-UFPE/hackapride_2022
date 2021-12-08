@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-family:  BalooBold;
+    font-family:  BalooExtraBold;
   }
 
   @font-face {

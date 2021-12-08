@@ -33,7 +33,7 @@ export const Guests: React.FC = () => {
     <Container id="Guests">
       <Tittle>
         <img src={Rainbow} alt="rainbow" />
-        <h1>Pessoas Convidadas</h1>
+        <h1 style={{ fontSize: '30px' }}>Pessoas Convidadas</h1>
       </Tittle>
       <p>
         {description}

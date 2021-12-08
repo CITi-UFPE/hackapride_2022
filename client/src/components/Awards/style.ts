@@ -87,6 +87,7 @@ export const TitleAwards = styled.div`
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
+  width: 140px;
   @media (max-width: 830px) {
       font-size: 20px;
     }
@@ -94,7 +95,6 @@ export const TitleAwards = styled.div`
 
 export const SubTitleAwards = styled.div`
   width: 60%;
-  padding-bottom: 6rem;
   font-family: BalooExtraBold;
   font-size: 20px;
   line-height: 106.9%;
@@ -130,8 +130,8 @@ export const SubTitleAwardsMobile = styled.div`
 export const AwardsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 40%;
+  align-items: flex-start;
+  width: 50%;
 `;
 
 export const ListAwards = styled.div`
@@ -139,7 +139,7 @@ export const ListAwards = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 
   @media(max-width: 830px) {
     gap: 15px;
@@ -148,7 +148,7 @@ export const ListAwards = styled.div`
 
 export const ListItemAwards = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 60px;
   padding-bottom: 3rem;
   @media (max-width: 830px) {
