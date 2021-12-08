@@ -8,9 +8,11 @@ import {
   ButtonText,
   TitleText,
   SubtitleText,
+  SubtitleOfSubtitleText,
   MainText,
   WebRainbow,
   MobileRainbow,
+  Link,
 } from './style';
 
 import WebRainbowPhoto from '../../assets/web-rainbow.png';
@@ -42,13 +44,16 @@ export const HomePage: React.FC = () => {
         <WebRainbow src={WebRainbowPhoto} />
         <MobileRainbow src={MobileRainbowPhoto} />
         <SubtitleText>
-          15, 16 e 17 de janeiro
-          <br />
-          na casa de Alana!
+          14, 15 e 16 de Janeiro
+          <SubtitleOfSubtitleText>
+            no Sebrae!
+          </SubtitleOfSubtitleText>
         </SubtitleText>
-        <Button>
-          <ButtonText>INSCREVA-SE</ButtonText>
-        </Button>
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfneYF8AfyohVukIwCTFgBa1Q3mrV8ZKLiVhyCwjWeLAV95XQ/viewform?usp=sf_link">
+          <Button>
+            <ButtonText>INSCREVA-SE</ButtonText>
+          </Button>
+        </Link>
         <MainText>
           {description}
         </MainText>

@@ -33,7 +33,7 @@ export const PartnersSection: React.FC = () => {
       <OutsideContainer>
         <Container>
           <img src={sectionsRainbow} alt="rainbow" />
-          <h3>Parcerias</h3>
+          <h3 style={{ fontSize: '28px' }}>Parcerias</h3>
           <p>{description}</p>
           <PartnersPhotos>
             {partnersPhotos.map((photo) => (

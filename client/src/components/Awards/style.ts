@@ -83,7 +83,7 @@ export const TitleAwards = styled.div`
   align-items: center;
   font-family: BalooExtraBold;
   color: #28201A;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
@@ -138,7 +138,7 @@ export const ListAwards = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   margin-top: 50px;
 
   @media(max-width: 830px) {
@@ -178,7 +178,7 @@ export const SupremeTitleAwards = styled.div`
   padding-bottom: 1.7rem;
   font-family:  BalooExtraBold;
   color: #28201A;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;

@@ -1,5 +1,23 @@
 import styled from 'styled-components';
 
+export const Link = styled.a`
+  outline:none; 
+  text-decoration:none;
+`;
+
+export const SubtitleOfSubtitleText = styled.p`
+color: ${(props) => props.theme.colors.black};
+font-size: 30px;
+font-weight: 400;
+font-family: BalooExtraBold;
+text-align: center;
+line-height: 100.4%;
+margin-top: 8px;
+@media (max-width: 910px) {
+  font-size: 24px;
+}
+`;
+
 export const Container = styled.section`
   display: flex;
   justify-content: center;
@@ -11,7 +29,7 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 200px 30px 80px 30px;
+  padding: 12% 30px 80px 30px;
 
   @media (max-width: 910px) {
     padding: 120px 30px 40px 30px;
@@ -20,7 +38,7 @@ export const ContentContainer = styled.div`
 
 export const TitleText = styled.p`
   color: ${(props) => props.theme.colors.black};
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 400;
   font-family: BalooExtraBold;
   text-align: center;
@@ -34,10 +52,10 @@ export const TitleText = styled.p`
 
 export const SubtitleText = styled.p`
   color: ${(props) => props.theme.colors.black};
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 400;
   font-family: BalooExtraBold;
-  padding: 14px 20px;
+  padding: 0.5% 0px;
   border-radius: 10px;
   margin-top: 72px;
   text-align: center;
@@ -49,20 +67,27 @@ export const SubtitleText = styled.p`
   }
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
   background-color: #28201A;
-  height: 56px;
-  width: 234px;
+  height: 40px;
+  width: 180px;
   margin-top: 60px;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  outline:none; 
+  border: none;
+  
+  &:hover{
+    /* background-color: #000000; */
+    opacity: 0.9;
+  }
 `;
 
 export const WebRainbow = styled.img`
-  width: 200px;
+  width: 180px;
   margin-top: 15px;
 
   @media(max-width: 910px) {
@@ -81,7 +106,8 @@ export const MobileRainbow = styled.img`
 
 export const ButtonText = styled.p`
   color: #EEDED1;
-  font-size: 28px;
+  font-size: 22px;
+  letter-spacing: 0.1em;
 `;
 
 export const Image = styled.img`
