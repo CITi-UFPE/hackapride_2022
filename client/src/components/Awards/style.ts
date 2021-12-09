@@ -29,8 +29,9 @@ export const ContainerAwards = styled.div`
     line-height: 32px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 850px) {
     margin-top: 30px;
+    width: 100%;
 
     p {
       font-size: 16px;
@@ -66,9 +67,6 @@ export const TextBodyAwards = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media (max-width: 830px) {
-      width: 40%;
-  }
 `;
 
 export const HeaderAwards = styled.div`
@@ -87,9 +85,10 @@ export const TitleAwards = styled.div`
   line-height: 100.4%;
   text-align: center;
   letter-spacing: 0.05em;
-  width: 140px;
+  width: 150px;
   @media (max-width: 830px) {
       font-size: 20px;
+      justify-content: center;
     }
 `;
 
@@ -110,6 +109,7 @@ export const SubTitleAwards = styled.div`
 export const SubTitleAwardsMobile = styled.div`
   display: none;
   @media (max-width: 830px) {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ export const SubTitleAwardsMobile = styled.div`
 export const AwardsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 50%;
 `;
 
@@ -142,7 +142,7 @@ export const ListAwards = styled.div`
   margin-top: 30px;
 
   @media(max-width: 830px) {
-    gap: 15px;
+    gap: 30px;
   }
 `;
 
@@ -151,22 +151,28 @@ export const ListItemAwards = styled.div`
   justify-content: flex-start;
   gap: 60px;
   padding-bottom: 3rem;
-  @media (max-width: 830px) {
+  @media (max-width: 1000px) {
       flex-direction: column;
       gap: 10px;
     }
 `;
 
 export const Description = styled.div`
-  width: 40%;
-  font-family:  BalooBold;
+  width: 300px;
+  word-wrap: break-word;
+  font-family: BalooBold;
   font-size: 20px;
   line-height: 106.9%;
+
+  @media(max-width: 1150px) {
+    width: 200px;
+  }
 
   @media (max-width: 830px) {
       font-size: 16px;
       padding: 0;
-      width: 100%;
+      width: 150px;
+      text-align: center;
     }
 `;
 
@@ -215,5 +221,9 @@ export const StarMobileImage = styled.img`
   
   @media (max-width: 830px) {
     transform: scale(0.9);
+  }
+
+  @media (max-width: 480px) {
+    transform: scale(.8);
   }
 `;

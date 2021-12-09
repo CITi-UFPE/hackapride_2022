@@ -9,11 +9,15 @@ export const Container = styled.div`
   margin-top: 8em;
 
   p {
-    width: 40%;
+    width: 35%;
     font-size: 20px;
     line-height: 32px;
     text-align: center;
     color: ${theme.colors.black};
+
+    @media(min-width: 2000px) {
+      width: 25%;
+    }
   }
 
   img {

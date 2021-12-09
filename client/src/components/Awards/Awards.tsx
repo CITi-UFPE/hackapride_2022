@@ -29,7 +29,6 @@ export const Awards: React.FC = () => {
   }, []);
 
   return (
-
     <Container>
       <ContainerAwards id="Awards">
         <TextBodyAwards>
